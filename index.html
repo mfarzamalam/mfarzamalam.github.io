@@ -112,11 +112,15 @@
           <div class="phone-glow"></div>
           <div class="device device--hero" data-tilt>
             <div class="device__island"></div>
-            <div class="screen" data-label="CourtAo — Home">
-              <!-- Drop a <10s muted screen recording at assets/videos/courtao-demo.mp4 and it auto-plays here.
-                   Until then, the poster (home screenshot) shows. -->
-              <video class="screen__media" autoplay muted loop playsinline preload="metadata"
-                     poster="assets/images/courtao-1.png" aria-label="CourtAo app demo">
+            <div class="screen">
+              <!-- Visible video placeholder. As soon as you drop a <10s muted clip at
+                   assets/videos/courtao-demo.mp4, the <video> autoplays and hides this layer. -->
+              <div class="video-ph" id="heroVideoPh">
+                <span class="video-ph__play" aria-hidden="true"></span>
+                <span class="video-ph__t">Demo video</span>
+                <span class="video-ph__s">drops in here</span>
+              </div>
+              <video class="screen__media" autoplay muted loop playsinline preload="metadata" aria-label="CourtAo app demo">
                 <source src="assets/videos/courtao-demo.mp4" type="video/mp4" />
               </video>
             </div>

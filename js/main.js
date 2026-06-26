@@ -91,6 +91,15 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
+  /* ---------- Hide hero video placeholder once the real clip plays ---------- */
+  var heroVideo = document.querySelector('.device--hero video');
+  var heroPh = document.getElementById('heroVideoPh');
+  if (heroVideo && heroPh) {
+    ['playing', 'loadeddata'].forEach(function (ev) {
+      heroVideo.addEventListener(ev, function () { heroPh.style.display = 'none'; });
+    });
+  }
+
   /* ---------- Subtle pointer tilt on phone mockups ---------- */
   if (!prefersReduced && window.matchMedia('(pointer: fine)').matches) {
     document.querySelectorAll('[data-tilt]').forEach(function (el) {

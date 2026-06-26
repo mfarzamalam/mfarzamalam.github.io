@@ -291,7 +291,9 @@ section[id], header[id] { scroll-margin-top: 84px; }
 .device {
   position: relative;
   width: 270px;
-  aspect-ratio: 9 / 19.3;
+  /* Matches the app screenshots' ~3:5 shape so nothing gets cropped by object-fit: cover.
+     (Screenshots are 1080x1841 / 1080x1737 — content-only captures, not full tall-phone height.) */
+  aspect-ratio: 3 / 5;
   background: linear-gradient(160deg, #16161f, #0a0a0f);
   border-radius: 42px;
   padding: 11px;
@@ -330,6 +332,30 @@ section[id], header[id] { scroll-margin-top: 84px; }
   object-fit: cover;
   z-index: 1;
 }
+/* Video placeholder — sits on top until the real clip plays, then JS hides it */
+.video-ph {
+  position: absolute; inset: 0; z-index: 2;
+  display: grid; place-content: center; gap: 4px; text-align: center; padding: 0 16px;
+  font-family: var(--font-mono);
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(109, 94, 252, .30), transparent 60%),
+    linear-gradient(160deg, #15151f, #0c0c14);
+}
+.video-ph__play {
+  width: 58px; height: 58px; margin: 0 auto 8px;
+  border-radius: 50%; display: grid; place-items: center;
+  background: var(--grad);
+  box-shadow: 0 12px 32px -8px rgba(109, 94, 252, .65);
+  animation: pulse 2.4s infinite;
+}
+.video-ph__play::after {
+  content: "";
+  border-style: solid; border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent #0a0a0f;
+  margin-left: 4px;
+}
+.video-ph__t { font-size: .92rem; color: var(--text); font-weight: 600; }
+.video-ph__s { font-size: .72rem; color: var(--text-faint); }
 
 /* Scroll cue */
 .scroll-cue {
