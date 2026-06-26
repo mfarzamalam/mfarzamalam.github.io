@@ -323,7 +323,8 @@ section[id], header[id] { scroll-margin-top: 84px; }
   padding: 0 18px;
   letter-spacing: .02em;
 }
-.device .screen img {
+.device .screen img,
+.device .screen video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;

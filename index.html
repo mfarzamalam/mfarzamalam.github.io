@@ -113,7 +113,12 @@
           <div class="device device--hero" data-tilt>
             <div class="device__island"></div>
             <div class="screen" data-label="CourtAo — Home">
-              <img src="assets/images/courtao-1.png" alt="CourtAo app home screen" loading="eager" onerror="this.style.display='none'" />
+              <!-- Drop a <10s muted screen recording at assets/videos/courtao-demo.mp4 and it auto-plays here.
+                   Until then, the poster (home screenshot) shows. -->
+              <video class="screen__media" autoplay muted loop playsinline preload="metadata"
+                     poster="assets/images/courtao-1.png" aria-label="CourtAo app demo">
+                <source src="assets/videos/courtao-demo.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
           <span class="float-chip float-chip--1">Riverpod v3</span>

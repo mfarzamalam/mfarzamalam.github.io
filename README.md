@@ -26,6 +26,22 @@ placeholders), but it looks best once you drop yours in. Use these exact filenam
 > automatically. PNG vs JPG: rename the `<img src=...>` in `index.html` if you change the
 > extension.
 
+### Add a demo video (optional but recommended)
+
+The hero phone will **autoplay a short looping video** if you provide one. Drop a file at:
+
+```
+assets/videos/courtao-demo.mp4
+```
+
+Until that file exists, the hero shows the `courtao-1.png` screenshot (the poster) — so nothing
+looks broken. As soon as the `.mp4` is committed, it plays automatically.
+
+**Recording tips:** keep it **under 10 seconds**, **no audio** (it plays muted), MP4 / H.264,
+portrait, and ideally under ~5 MB so it loads fast. A screen recording of the app (iOS:
+built-in screen record; Android: `adb` or the phone's recorder; or the running APK in an
+emulator) works great.
+
 ---
 
 ## 2. Personalize the text
