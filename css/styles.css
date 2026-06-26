@@ -405,9 +405,11 @@ section[id], header[id] { scroll-margin-top: 84px; }
   display: grid; place-items: center;
   box-shadow: var(--shadow-lg);
 }
-.avatar::after {
-  content: attr(data-label);
-  font-family: var(--font-mono); font-size: .85rem; color: var(--text-faint);
+.avatar__mono {
+  position: absolute; inset: 0; z-index: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 5.5rem; letter-spacing: -.03em;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 .about__badge {
