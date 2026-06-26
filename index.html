@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO / Social ===== -->
+  <title>Farzam Alam — Mobile Developer (Flutter)</title>
+  <meta name="description" content="Farzam Alam is a mobile developer building production-grade iOS & Android apps with Flutter — offline-first, location-aware, and backed by robust Django APIs." />
+  <meta name="author" content="Farzam Alam" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Farzam Alam — Mobile Developer (Flutter)" />
+  <meta property="og:description" content="Production iOS & Android apps with Flutter. Offline-first, location-aware, full-stack." />
+  <meta property="og:image" content="assets/images/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Farzam Alam — Mobile Developer (Flutter)" />
+  <meta name="twitter:description" content="Production iOS & Android apps with Flutter. Offline-first, location-aware, full-stack." />
+  <meta name="twitter:image" content="assets/images/og.png" />
+
+  <!-- Inline SVG favicon (monogram) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236d5efc'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="brand" aria-label="Farzam Alam — home">
+        <span class="brand__mark">FA</span>
+        <span class="brand__dot">.</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="assets/resume.pdf" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Résumé</a>
+        <button class="icon-btn nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="pulse"></span> Available for freelance &amp; full-time</p>
+          <h1 class="hero__title reveal">
+            I build <span class="grad">production mobile apps</span> with Flutter.
+          </h1>
+          <p class="hero__sub reveal">
+            I'm <strong>Farzam Alam</strong>, a mobile developer crafting polished iOS &amp; Android
+            experiences — offline-first, location-aware, and backed by robust Django APIs.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a href="#work" class="btn btn--primary">View my work</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+
+          <div class="hero__socials reveal" aria-label="Social links">
+            <a href="https://github.com/mfarzamalam" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            </a>
+            <a href="mailto:mfarzamalam@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero phone mockup -->
+        <div class="hero__visual reveal" aria-hidden="false">
+          <div class="phone-glow"></div>
+          <div class="device device--hero" data-tilt>
+            <div class="device__island"></div>
+            <div class="screen" data-label="CourtAo — Home">
+              <img src="assets/images/courtao-1.png" alt="CourtAo app home screen" loading="eager" onerror="this.style.display='none'" />
+            </div>
+          </div>
+          <span class="float-chip float-chip--1">Riverpod v3</span>
+          <span class="float-chip float-chip--2">Offline-first</span>
+        </div>
+      </div>
+
+      <a href="#work" class="scroll-cue" aria-label="Scroll to work">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>BLoC</span><span>Provider</span><span>go_router</span><span>Hive</span><span>Django</span><span>DRF</span><span>Celery</span><span>WebSockets</span><span>JWT</span><span>MySQL</span><span>Redis</span><span>Datadog</span><span>Geolocation</span><span>REST APIs</span><span>CI/CD</span>
+        <!-- duplicate for seamless loop -->
+        <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>BLoC</span><span>Provider</span><span>go_router</span><span>Hive</span><span>Django</span><span>DRF</span><span>Celery</span><span>WebSockets</span><span>JWT</span><span>MySQL</span><span>Redis</span><span>Datadog</span><span>Geolocation</span><span>REST APIs</span><span>CI/CD</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__media reveal">
+          <div class="avatar" data-label="Your photo">
+            <img src="assets/images/profile.jpg" alt="Farzam Alam" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="about__badge">
+            <strong>Flutter</strong>
+            <span>iOS &amp; Android</span>
+          </div>
+        </div>
+
+        <div class="about__copy">
+          <p class="section__kicker reveal">About</p>
+          <h2 class="section__title reveal">Mobile-first engineer who ships end-to-end.</h2>
+          <p class="reveal">
+            I design and build cross-platform apps with <strong>Flutter</strong> that feel native on both
+            iOS and Android. My focus is the hard parts that make an app trustworthy in the real world:
+            <strong>offline-first data</strong>, <strong>GPS &amp; geofencing</strong>, secure auth, and
+            clean state management with Riverpod, BLoC and Provider.
+          </p>
+          <p class="reveal">
+            I'm comfortable across the stack — I back my apps with <strong>Django / DRF</strong> APIs,
+            JWT auth, Celery jobs and WebSockets, so I can own a feature from the database to the pixel.
+            I care about architecture, tests, and shipping things that hold up under load.
+          </p>
+
+          <ul class="about__facts reveal">
+            <li><span>📍</span> Based in Pakistan · working worldwide</li>
+            <li><span>⚙️</span> Offline-first · location-aware · real-time</li>
+            <li><span>🧪</span> Tests &amp; clean architecture by default</li>
+            <li><span>🤝</span> Open to freelance &amp; full-time roles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Selected Work</p>
+          <h2 class="section__title">Apps I've designed &amp; built.</h2>
+          <p class="section__lead">Two production-grade Flutter apps — from a consumer marketplace to an enterprise field-ops tool.</p>
+        </header>
+
+        <!-- Project 1: CourtAo -->
+        <article class="project reveal">
+          <div class="project__visual">
+            <div class="project__glow"></div>
+            <div class="device device--tilt-l" data-tilt>
+              <div class="device__island"></div>
+              <div class="screen" data-label="CourtAo — Arenas">
+                <img src="assets/images/courtao-2.png" alt="CourtAo arena discovery screen" loading="lazy" onerror="this.style.display='none'" />
+              </div>
+            </div>
+            <div class="device device--tilt-r device--back" data-tilt>
+              <div class="device__island"></div>
+              <div class="screen" data-label="CourtAo — Booking">
+                <img src="assets/images/courtao-3.png" alt="CourtAo booking screen" loading="lazy" onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+
+          <div class="project__body">
+            <p class="project__index">01 — Consumer marketplace</p>
+            <h3 class="project__title">CourtAo</h3>
+            <p class="project__tagline">A white-label sports-arena booking marketplace.</p>
+            <p>
+              Discover and book indoor courts — Padel, Futsal, Cricket, Table Tennis and 5-a-side
+              football — across multiple arenas and locations. Browse anonymously, then book with a
+              phone + OTP login. Bookings persist fully offline, with per-location pricing, peak-hour
+              rates and a 30% advance-payment flow.
+            </p>
+            <ul class="chips">
+              <li>Anonymous discovery</li>
+              <li>Phone + OTP auth</li>
+              <li>Offline persistence</li>
+              <li>White-label theming</li>
+              <li>Multi-arena pricing</li>
+              <li>39 automated tests</li>
+            </ul>
+            <div class="project__tech">
+              <span>Flutter</span><span>Dart 3</span><span>Riverpod v3</span><span>go_router</span><span>shared_preferences</span><span>flutter_animate</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/mfarzamalam" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: AttendX (reversed) -->
+        <article class="project project--reverse reveal">
+          <div class="project__visual">
+            <div class="project__glow project__glow--alt"></div>
+            <div class="device device--tilt-r" data-tilt>
+              <div class="device__island"></div>
+              <div class="screen" data-label="AttendX — Check-in">
+                <img src="assets/images/attendx-1.png" alt="AttendX GPS check-in screen" loading="lazy" onerror="this.style.display='none'" />
+              </div>
+            </div>
+            <div class="device device--tilt-l device--back" data-tilt>
+              <div class="device__island"></div>
+              <div class="screen" data-label="AttendX — History">
+                <img src="assets/images/attendx-2.png" alt="AttendX attendance history screen" loading="lazy" onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+
+          <div class="project__body">
+            <p class="project__index">02 — Enterprise field-ops</p>
+            <h3 class="project__title">AttendX</h3>
+            <p class="project__tagline">GPS-gated attendance for shift &amp; field teams.</p>
+            <p>
+              Employees clock in and out against geofenced job sites; an offline queue captures
+              punches with no signal and syncs them in order on reconnect. Built for the messy real
+              world — mock-location detection, clock-drift warnings, multi-session shifts, overnight
+              shifts and biometric login. A Django admin portal handles orgs, projects, shifts,
+              assignments and attendance reporting.
+            </p>
+            <ul class="chips">
+              <li>Haversine geofencing</li>
+              <li>Offline sync queue</li>
+              <li>Biometric login</li>
+              <li>Multi-session shifts</li>
+              <li>Overnight shifts</li>
+              <li>JWT auto-refresh</li>
+            </ul>
+            <div class="project__tech">
+              <span>Flutter</span><span>Provider</span><span>geolocator</span><span>JWT</span><span>Django</span><span>DRF</span><span>MySQL</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/mfarzamalam" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Toolbox</p>
+          <h2 class="section__title">What I work with.</h2>
+        </header>
+
+        <div class="bento">
+          <div class="bento__card bento__card--lg reveal">
+            <div class="bento__icon">📱</div>
+            <h3>Mobile</h3>
+            <p>My home turf — cross-platform apps that feel native.</p>
+            <div class="tags">
+              <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>BLoC</span><span>Provider</span><span>go_router</span><span>Hive</span><span>flutter_animate</span>
+            </div>
+          </div>
+
+          <div class="bento__card reveal">
+            <div class="bento__icon">🛠️</div>
+            <h3>Backend</h3>
+            <div class="tags">
+              <span>Django</span><span>DRF</span><span>Django Ninja</span><span>Celery</span><span>WebSockets</span><span>JWT</span><span>MySQL</span><span>Redis</span>
+            </div>
+          </div>
+
+          <div class="bento__card reveal">
+            <div class="bento__icon">⚡</div>
+            <h3>Capabilities</h3>
+            <div class="tags">
+              <span>Offline-first</span><span>Geofencing</span><span>Push notifications</span><span>Real-time</span><span>Biometric auth</span>
+            </div>
+          </div>
+
+          <div class="bento__card bento__card--wide reveal">
+            <div class="bento__icon">🚀</div>
+            <h3>Tooling &amp; delivery</h3>
+            <div class="tags">
+              <span>Git</span><span>CI/CD</span><span>Datadog</span><span>REST APIs</span><span>App Store</span><span>Google Play</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Experience</p>
+          <h2 class="section__title">Where I've been building.</h2>
+        </header>
+
+        <!-- EDIT the dates/titles below to match your real history -->
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__meta">2023 — Present</div>
+            <div class="timeline__card">
+              <h3>Mobile &amp; Full-Stack Developer</h3>
+              <p class="timeline__org">Avialdo Solutions</p>
+              <p>
+                Build and ship Flutter apps and the Django services behind them. Worked across
+                production mobile products — feature delivery, offline-first architecture,
+                real-time updates, push notifications and observability with Datadog.
+              </p>
+              <div class="project__tech">
+                <span>Flutter</span><span>Django</span><span>DRF</span><span>Celery</span><span>WebSockets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__meta">Selected projects</div>
+            <div class="timeline__card">
+              <h3>CourtAo &amp; AttendX</h3>
+              <p class="timeline__org">Product &amp; mobile engineering</p>
+              <p>
+                Designed and built two end-to-end Flutter apps: a white-label sports-booking
+                marketplace and a GPS-gated attendance platform — covering UX, state management,
+                offline data and the supporting APIs.
+              </p>
+              <div class="project__tech">
+                <span>Flutter</span><span>Riverpod</span><span>Provider</span><span>Geolocation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <p class="section__kicker">Contact</p>
+          <h2 class="contact__title">Let's build something <span class="grad">people love to use.</span></h2>
+          <p class="contact__lead">
+            Have an app idea, a project that needs shipping, or a role you think I'd fit?
+            I'd love to hear about it.
+          </p>
+          <div class="contact__actions">
+            <a href="mailto:mfarzamalam@gmail.com" class="btn btn--primary btn--lg">mfarzamalam@gmail.com</a>
+            <a href="https://github.com/mfarzamalam" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="brand"><span class="brand__mark">FA</span><span class="brand__dot">.</span></a>
+      <p>© <span id="year"></span> Farzam Alam · Built with HTML, CSS &amp; a little JavaScript.</p>
+      <div class="footer__links">
+        <a href="https://github.com/mfarzamalam" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mfarzamalam@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
