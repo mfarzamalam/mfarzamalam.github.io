@@ -449,6 +449,7 @@ section[id], header[id] { scroll-margin-top: 84px; }
 }
 .project__glow--alt { background: radial-gradient(circle, var(--accent-2), transparent 70%); }
 .project__visual .device { position: absolute; width: 230px; }
+.device--hero { aspect-ratio: 9 / 16; } /* matches the demo video (478x850) so it fits with no crop */
 .device--tilt-l { transform: rotate(-7deg) translateX(-26%); }
 .device--tilt-r { transform: rotate(7deg) translateX(26%); }
 .device--back { z-index: 1 !important; opacity: .92; }
