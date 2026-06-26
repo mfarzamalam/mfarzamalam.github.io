@@ -26,8 +26,6 @@ placeholders), but it looks best once you drop yours in. Use these exact filenam
 > automatically. PNG vs JPG: rename the `<img src=...>` in `index.html` if you change the
 > extension.
 
-Optionally drop a `resume.pdf` in `assets/` for the **Résumé** button.
-
 ---
 
 ## 2. Personalize the text
@@ -83,8 +81,7 @@ mfarzamalam.github.io/
 ├── css/styles.css      # design system + layout
 ├── js/main.js          # theme toggle, scroll reveal, mobile nav, tilt
 ├── assets/
-│   ├── images/         # ← your screenshots + photo go here
-│   └── resume.pdf      # (optional)
+│   └── images/         # ← your screenshots + photo go here
 ├── .nojekyll           # serve files as-is, skip Jekyll
 └── README.md
 ```
